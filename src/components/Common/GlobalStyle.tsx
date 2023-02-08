@@ -1,14 +1,16 @@
 import React, { FunctionComponent } from 'react'
 import { Global, css } from '@emotion/react'
 
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Noto Serif KR', serif;
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
 
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   html,
