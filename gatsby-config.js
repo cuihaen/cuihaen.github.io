@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `주니어 개발자의 개발 블로그`,
-    description: `주니어 개발자로서의 저를 표현한 블로그입니다.`,
+    title: `Haeun's 개발블로그`,
+    description: `성장하기 위해 학습하는 내용들을 기록합니다.`,
     author: `cuihaen`,
     siteUrl: 'https://cuihaen.github.io/',
   },
