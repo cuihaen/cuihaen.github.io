@@ -42,6 +42,7 @@ const Title = styled.div`
   -webkit-box-orient: vertical;
   font-size: 20px;
   font-weight: 700;
+  color:#bb371a;
 `
 
 const Date = styled.div`
@@ -76,7 +77,7 @@ const Summary = styled.div`
   overflow-wrap: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 16px;
+  font-size: 12px;
   opacity: 0.8;
 `
 
