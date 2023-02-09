@@ -9,7 +9,7 @@ const MarkdownRenderer = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 960px;
   margin: 0 auto;
   padding: 100px 0;
   word-break: break-all;
@@ -28,7 +28,7 @@ const MarkdownRenderer = styled.div`
   h1,
   h2,
   h3 {
-    font-weight: 800;
+    font-weight: 500;
     margin-bottom: 30px;
   }
 
@@ -61,7 +61,7 @@ const MarkdownRenderer = styled.div`
     margin: 30px 0;
     padding: 5px 15px;
     border-left: 2px solid #000000;
-    font-weight: 800;
+    font-weight: 600;
   }
 
   // Adjust List Element Style
@@ -101,8 +101,8 @@ const MarkdownRenderer = styled.div`
   }
 
   // Markdown Responsive Design
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 1024px) {
+    width: 95%;
     padding: 80px 20px;
     line-height: 1.6;
     font-size: 14px;

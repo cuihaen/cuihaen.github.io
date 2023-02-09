@@ -31,14 +31,12 @@ const PrevPageIcon = styled.div`
   height: 40px;
   border-radius: 50%;
   background: #ffffff;
-  color: #000000;
-  font-size: 22px;
+  color: #bb371a;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
     font-size: 18px;
   }
 `
@@ -52,11 +50,11 @@ const Title = styled.div`
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 45px;
-  font-weight: 800;
+  font-size: 38px;
+  font-weight: 700;
 
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 28px;
   }
 `
 
@@ -65,14 +63,13 @@ const PostData = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 14px;
   }
 `
 
