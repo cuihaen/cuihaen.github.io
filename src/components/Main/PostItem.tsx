@@ -6,12 +6,14 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 type PostItemProps = PostFrontmatterType & { link: string }
 
+
+// flex-direction: column;
 const PostItemWrapper = styled(Link)`
   display: flex;
-  flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   transition: 0.3s box-shadow;
+  overflow:hidden;
   cursor: pointer;
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -19,22 +21,25 @@ const PostItemWrapper = styled(Link)`
 `
 
 const ThumbnailImage = styled(GatsbyImage)`
-  width: 100%;
+  width: 30%;
   height: 200px;
-  border-radius: 10px 10px 0 0;
+  float:left;
 `
-
+//border-radius: 10px 10px 0 0;
+// flex: 1;
+// display: flex;
+// flex-direction: column;
 const PostItemContent = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
+  width:70%;
+  float:right;
+  padding: 15px 30px;
+  position:relative;
 `
 
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
-  margin-bottom: 3px;
+  margin: 20px 0 3px;
   text-overflow: ellipsis;
   white-space: normal;
   overflow-wrap: break-word;
@@ -46,9 +51,12 @@ const Title = styled.div`
 `
 
 const Date = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   opacity: 0.7;
+  position:absolute;
+  right:40px;top:20px;
+  color:#999;
 `
 
 const Category = styled.div`
