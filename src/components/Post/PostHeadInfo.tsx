@@ -12,14 +12,14 @@ export type PostHeadInfoProps = {
 const PostHeadInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 960px;
   height: 100%;
   margin: 0 auto;
   padding: 60px 0;
   color: #ffffff;
 
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 1024px) {
+    width: 95%;
     padding: 40px 20px;
   }
 `

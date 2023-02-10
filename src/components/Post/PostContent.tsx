@@ -35,7 +35,7 @@ const MarkdownRenderer = styled.div`
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   hr + h1,
@@ -60,26 +60,25 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
-    border-left: 2px solid #000000;
-    font-weight: 600;
+    border-left: 2px solid #cccccc;
+    font-weight: 400;
+    font-family: 'Noto Serif KR', serif;
   }
 
   // Adjust List Element Style
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
   }
 
   // Adjust Horizontal Rule style
   hr {
-    border: 1px solid #000000;
-    margin: 100px 0;
+    margin: 5px 0 40px;
   }
 
   // Adjust Link Element Style
   a {
-    color: #4263eb;
+    color: #FF6464;
     text-decoration: underline;
   }
 
