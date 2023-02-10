@@ -49,7 +49,7 @@ type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItemWrapper = styled(Link)`
 width:960px;
-margin : 0 auto;
+margin : 0 auto 35px;
 overflow:hidden;
 border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
