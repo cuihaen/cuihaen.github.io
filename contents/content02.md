@@ -1,7 +1,7 @@
 ---
 date: '2022-07-03'
 title: 'UI(GUI)/UX'
-categories: ['Web', 'IT지식']
+categories: ['Web', 'IT지식', 'UX/UI']
 summary: '웹의 힘은 그것의 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.'
 thumbnail: './defult.png'
 ---
