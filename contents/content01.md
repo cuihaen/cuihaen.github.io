@@ -3,7 +3,7 @@ date: '2022-06-23'
 title: '웹표준이란?'
 categories: ['Web', 'IT지식']
 summary: '웹의 힘은 그것의 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수적인 요소이다.'
-thumbnail: './test.png'
+thumbnail: './defult.png'
 ---
 
 > 웹의 힘은 그것의 **보편성**에 있다. 장애에 구애없이 **모든 사람이 접근할 수 있는 것이 필수적인 요소**이다.  
@@ -39,4 +39,6 @@ thumbnail: './test.png'
 ### 3. 표준 마크업 검사(W3C)
 
 - W3C Markup Validation (http://validator.kldp.org) - HTML검사
+  <img src="./image/img1.jpg" alt="W3C-HTML">
 - W3C CSS Validation (http://jigsaw.w3.org/css-validator) - CSS검사
+  <img src="./image/img2.jpg" alt="W3C-CSS">
