@@ -8,34 +8,97 @@ type PostItemProps = PostFrontmatterType & { link: string }
 
 
 // flex-direction: column;
+// const PostItemWrapper = styled(Link)`
+//   display: flex;
+//   border-radius: 10px;
+//   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+//   transition: 0.3s box-shadow;
+//   overflow:hidden;
+//   cursor: pointer;
+//   &:hover {
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+//   }
+// `
+
+// const ThumbnailImage = styled(GatsbyImage)`
+//   width: 30%;
+//   height: 200px;
+//   float:left;
+
+//   @media (max-width: 640px) {
+//     float:none;
+//     width: 100%;
+//     height: 200px;
+//   }
+// `
+// //border-radius: 10px 10px 0 0;
+// // flex: 1;
+// // display: flex;
+// // flex-direction: column;
+// const PostItemContent = styled.div`
+//   width:70%;
+//   float:right;
+//   padding: 15px 30px;
+//   position:relative;
+  
+//   @media (max-width: 640px) {
+//     width:100%;
+//     float:none;
+//   }
+// `
+
 const PostItemWrapper = styled(Link)`
-  display: flex;
-  border-radius: 10px;
+width:960px;
+margin : 0 auto;
+overflow:hidden;
+border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   transition: 0.3s box-shadow;
-  overflow:hidden;
   cursor: pointer;
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
+  display: block;
+
+@media (max-width: 1024px) {
+  width:90%;
+}
+
+@media (max-width: 640px) {
+  width:90%;
+  flex-direction: column;
+  
+}
 `
 
 const ThumbnailImage = styled(GatsbyImage)`
-  width: 30%;
+width:350px;
+float:left;
+@media (max-width: 1024px) {
+  width:285px; 
+}
+@media (max-width: 640px) {
+  width:100%;
   height: 200px;
-  float:left;
-`
-//border-radius: 10px 10px 0 0;
-// flex: 1;
-// display: flex;
-// flex-direction: column;
-const PostItemContent = styled.div`
-  width:70%;
-  float:right;
-  padding: 15px 30px;
-  position:relative;
+  float:none;
+  border-radius: 10px 10px 0 0;
+}
 `
 
+const PostItemContent = styled.div`
+position:relative;
+padding: 25px 40px;
+margin-left:340px;
+@media (max-width: 1024px) {
+  margin-left:285px;
+  padding: 15px 25px;
+}
+
+@media (max-width: 640px) {
+
+  margin-left:0;
+}
+`
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
@@ -48,15 +111,27 @@ const Title = styled.div`
   font-size: 20px;
   font-weight: 700;
   color:#bb371a;
+  @media (max-width: 1024px) {
+    margin-top:0;
+    font-size: 18px;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
 `
 
 const Date = styled.div`
+
   font-size: 12px;
   font-weight: 400;
   opacity: 0.7;
   position:absolute;
-  right:40px;top:20px;
+  right:40px;top:30px;
   color:#999;
+  @media (max-width: 640px) {
+    position:absolute;
+    right:20px;top:20px;
+  }
 `
 
 const Category = styled.div`
