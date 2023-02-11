@@ -25,7 +25,13 @@ const defaultStyle = css`
     text-decoration: none;
     cursor: pointer;
   }
-`
+  
+  @media (prefers-color-scheme: dark) {
+
+  }
+`;
+
+
 
 const GlobalStyle: FunctionComponent = function () {
   return <Global styles={defaultStyle} />
