@@ -32,26 +32,30 @@
 <li>Modifier는 단독으로 사용되지 않는다.</li>
 </ul>
   <br>  
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  📍 Modifier의 2가지 유형  
-
-  ‣ Boolean  
-  - Modifier의 유무만 중요하고 그 값은 무관할 때 사용 → disabled, focused  
-  - Boolean Modifier가 있으면 해당 값이 '참'으로 간주됨.  
-  - 명명법 : `block-name_modifier-name`, `block-name_element-name_modifier-name`  
-
-  ‣ Key-Value  
-  - Modifier의 값이 중요한 경우에 사용 → size_s , theme_islands   
-  - 명명법 : `block-name_modifier-name_modifier-value`, `block-name_element-name_modifier-name_modifier-value`  
-  - MindBEMding : Modifier의 전후 구분문자를  **_(언더바 1개)에서 --(하이픈 2개)로 변경**한 스타일.  
-  &lt;br>  
-  
-  ```  
-    'block-name--modifier-name'  
-    'block-name__element-name--modifier-name'  
-    'block-name--modifier-name--modifier-value'  
-    'block-name__element-name--modifier-name--modifier-value'
-  ```  
-  &lt;br> </code></pre></div>
+<p>📍 Modifier의 2가지 유형</p>
+<p>‣ Boolean</p>
+<ul>
+<li>Modifier의 유무만 중요하고 그 값은 무관할 때 사용 → disabled, focused</li>
+<li>Boolean Modifier가 있으면 해당 값이 ‘참’으로 간주됨.</li>
+<li>명명법 : <code class="language-text">block-name_modifier-name</code>, <code class="language-text">block-name_element-name_modifier-name</code></li>
+</ul>
+<p>‣ Key-Value</p>
+<ul>
+<li>
+<p>Modifier의 값이 중요한 경우에 사용 → size_s , theme_islands</p>
+</li>
+<li>
+<p>명명법 : <code class="language-text">block-name_modifier-name_modifier-value</code>, <code class="language-text">block-name_element-name_modifier-name_modifier-value</code></p>
+</li>
+<li>
+<p>MindBEMding : Modifier의 전후 구분문자를  <strong>_(언더바 1개)에서 –(하이픈 2개)로 변경</strong>한 스타일.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">'block-name--modifier-name'  
+'block-name__element-name--modifier-name'  
+'block-name--modifier-name--modifier-value'  
+'block-name__element-name--modifier-name--modifier-value'</code></pre></div>
+</li>
+</ul>
+  <br> 
 <p><strong>4. Mix</strong></p>
 <ul>
 <li>Block과 Element가 하나의 HTML요소 안에 존재하는 것을 의미함.</li>
@@ -59,7 +63,7 @@
 <li>기존 BEM Entity를 기반으로 의미상 새로운 인터페이스 컴포넌트를 작성.</li>
 <li>가급적 상세도를 높이지 않고 Block의 독립성 유지 가능.</li>
 </ul>
-  <br>  
+<br>  
 <p><strong>🔸 Block vs Element 어떤 걸 만들어야할까? 🔸</strong></p>
 <ul>
 <li>구현된 다른 페이지 component에 의존하지 않고 코드가 재사용된다. → Block</li>
