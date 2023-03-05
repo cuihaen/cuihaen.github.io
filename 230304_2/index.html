@@ -32,24 +32,25 @@
 <li>Modifier는 단독으로 사용되지 않는다.</li>
 </ul>
   <br>  
-      📍 Modifier의 2가지 유형  
-      ‣ Boolean  
-        - Modifier의 유무만 중요하고 그 값은 무관할 때 사용 → disabled, focused  
-        - Boolean Modifier가 있으면 해당 값이 '참'으로 간주됨.  
-        - 명명법 : `block-name_modifier-name`, `block-name_element-name_modifier-name`  
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  ‣ Key-Value  
-    - Modifier의 값이 중요한 경우에 사용 → size_s , theme_islands   
-    - 명명법 : `block-name_modifier-name_modifier-value`, `block-name_element-name_modifier-name_modifier-value`  
-    - MindBEMding : Modifier의 전후 구분문자를  **_(언더바 1개)에서 --(하이픈 2개)로 변경**한 스타일.  
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">  📍 Modifier의 2가지 유형  
+
+  ‣ Boolean  
+  - Modifier의 유무만 중요하고 그 값은 무관할 때 사용 → disabled, focused  
+  - Boolean Modifier가 있으면 해당 값이 '참'으로 간주됨.  
+  - 명명법 : `block-name_modifier-name`, `block-name_element-name_modifier-name`  
+
+  ‣ Key-Value  
+  - Modifier의 값이 중요한 경우에 사용 → size_s , theme_islands   
+  - 명명법 : `block-name_modifier-name_modifier-value`, `block-name_element-name_modifier-name_modifier-value`  
+  - MindBEMding : Modifier의 전후 구분문자를  **_(언더바 1개)에서 --(하이픈 2개)로 변경**한 스타일.  
   &lt;br>  
   
-
-    
+  ```  
     'block-name--modifier-name'  
     'block-name__element-name--modifier-name'  
     'block-name--modifier-name--modifier-value'  
     'block-name__element-name--modifier-name--modifier-value'
-    
+  ```  
   &lt;br> </code></pre></div>
 <p><strong>4. Mix</strong></p>
 <ul>
