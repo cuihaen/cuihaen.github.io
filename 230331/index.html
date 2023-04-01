@@ -34,6 +34,21 @@ let age = person['age']
 console.log(name,age)</code></pre></div>
 <p>console창에 찍히는 결과 ↓</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">haeun 20</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">let person = {
+  name : 'haeun',
+  age : 20
+}
+
+//destructuring방식 = 객체를 분해해서 값을 가져옴
+let { name,age } = person
+
+console.log(name,age)
+
+let array = [1,2,3,4]
+let [a,b,...rest] = array
+
+console.log(a,b)
+console.log(rest) // = a,b를 제외한 나머지 [3,4]</code></pre></div>
 <hr>
 <br>
 <h3>🟡</h3>
