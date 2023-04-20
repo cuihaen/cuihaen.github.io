@@ -60,16 +60,24 @@ console창에 찍히는 결과 ↓
 haeun 20
 ```
 
-![test-image](cover.jpg)
+```
+let person = {
+  name : 'haeun',
+  age : 20
+}
 
-<!-- Code -->
+//destructuring방식 = 객체를 분해해서 값을 가져옴
+let { name,age } = person
 
-```javascript
-const amsterdam = 'cool'
+console.log(name,age)
+
+let array = [1,2,3,4]
+let [a,b,...rest] = array
+
+console.log(a,b)
+console.log(rest) // = a,b를 제외한 나머지 [3,4]
 ```
 
-<!-- Task List -->
+---
 
-- [x] Task 1
-- [x] Task 2
-- [ ] Task 3
+출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
