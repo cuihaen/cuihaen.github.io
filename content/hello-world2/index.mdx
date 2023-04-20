@@ -1,0 +1,75 @@
+---
+title: Javascript 문법 for REACT(코딩알려주는 누나)
+date: 2023-03-31
+cover: cover.jpg
+tags: [Web, Javascript, REACT]
+---
+
+### 🟠 Object shorthand assignment
+
+```javascript
+// 기존 방식
+let name = 'haeun'
+let age = '29'
+
+let person = {
+  name: name,
+  age: age,
+}
+
+console.log(person)
+```
+
+console창에 찍히는 결과 ↓
+
+```
+{ name:'haeun',age:29 }
+```
+
+```javascript
+let name = 'haeun'
+let age = '29'
+
+// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
+let person = {
+  name,
+  age,
+}
+```
+
+---
+
+### Destructuring
+
+```javascript
+//기존방식
+let person = {
+  name: 'haeun',
+  age: 20,
+}
+
+let name = person.name
+let age = person['age']
+
+console.log(name, age)
+```
+
+console창에 찍히는 결과 ↓
+
+```
+haeun 20
+```
+
+![test-image](cover.jpg)
+
+<!-- Code -->
+
+```javascript
+const amsterdam = 'cool'
+```
+
+<!-- Task List -->
+
+- [x] Task 1
+- [x] Task 2
+- [ ] Task 3

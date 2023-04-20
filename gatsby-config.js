@@ -1,26 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: 'John Doe',
+    title: "Haeun's Blog",
     description:
       'John Doe is a lifestyle photographer based in San Francisco, CA',
     url: 'https://cuihaen.github.io',
-    author: 'John Doe',
+    author: 'Haeun Choi',
     image: 'https://gatsby-starter-amsterdam.netlify.com/og-image.jpg',
-    intro: 'John Doe is a lifestyle photographer based in San Francisco, CA',
+    intro: 'Welcome',
     menuLinks: [
       {
-        name: 'John Doe',
+        name: "Haeun's Blog",
         slug: '/',
       },
       {
-        name: 'Example Page',
-        slug: '/example/',
+        name: 'About Me',
+        slug: '/about/',
       },
     ],
     footerLinks: [
       {
-        name: 'Gatsby Theme Amsterdam',
-        url: 'https://github.com/ryanwiemer/gatsby-theme-amsterdam',
+        name: 'Visit my portfolio →',
+        url: 'https://haeun367.cafe24.com/profile',
       },
     ],
   },

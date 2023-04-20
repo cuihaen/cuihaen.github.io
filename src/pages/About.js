@@ -42,11 +42,11 @@ const Content = styled.div`
   }
 `
 
-const ExamplePage = ({ data }) => {
+const AboutPage = ({ data }) => {
   return (
     <Container>
-      <SEO title="Example Page" description="This is just an example page" />
-      <Title>Example Page</Title>
+      <SEO title="About" description="This is just an example page" />
+      <Title>About</Title>
       <Content>
         <p>
           This is just a regular page{' '}
@@ -88,4 +88,4 @@ const ExamplePage = ({ data }) => {
   )
 }
 
-export default ExamplePage
+export default AboutPage
