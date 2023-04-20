@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Haeun's Blog",
     description:
-      'John Doe is a lifestyle photographer based in San Francisco, CA',
+      '주니어 프론트엔드 개발자 최하은 입니다.',
     url: 'https://cuihaen.github.io',
     author: 'Haeun Choi',
     image: 'https://gatsby-starter-amsterdam.netlify.com/og-image.jpg',
