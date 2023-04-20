@@ -3,7 +3,7 @@ module.exports = {
     title: 'John Doe',
     description:
       'John Doe is a lifestyle photographer based in San Francisco, CA',
-    url: 'https://gatsby-starter-amsterdam.netlify.com',
+    url: 'https://cuihaen.github.io',
     author: 'John Doe',
     image: 'https://gatsby-starter-amsterdam.netlify.com/og-image.jpg',
     intro: 'John Doe is a lifestyle photographer based in San Francisco, CA',
