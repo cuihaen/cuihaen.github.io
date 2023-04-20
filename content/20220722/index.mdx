@@ -1,83 +1,195 @@
 ---
-title: Javascript 문법 for REACT(코딩알려주는 누나)
-date: 2023-03-31
+title: 리스트이미지(2) - 연혁
+date: 2022-07-22
 cover: cover.jpg
 tags: [Web, Javascript, REACT]
 ---
 
-### 🟠 Object shorthand assignment
+### 방법 1
 
-```javascript
-// 기존 방식
-let name = 'haeun'
-let age = '29'
-
-let person = {
-  name: name,
-  age: age,
-}
-
-console.log(person)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-{ name:'haeun',age:29 }
-```
-
-```javascript
-let name = 'haeun'
-let age = '29'
-
-// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
-let person = {
-  name,
-  age,
-}
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: '에스코어드림';
+        font-size: 14px;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      .history {
+        width: 750px;
+        margin: 30px;
+      }
+      .history li {
+        border: 1px solid #333;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      .history dl {
+        margin: 10px 0;
+      }
+      .history dt {
+        float: left;
+        margin: 30px;
+      }
+      .history dd {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-left: 190px;
+        background: url(./images/dot.jpg) left center no-repeat;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="history">
+      <ul>
+        <li>
+          <dl>
+            <dt><img src="./images/2011.jpg" alt="2011년" /></dt>
+            <dd>시민사회 피어리뷰 공개워크숍 몽골 사업성과 발제</dd>
+            <dd>베트남, 삼성생명 컴퓨터교실 사업 시작</dd>
+            <dd>케냐, 빈민여성 자립지원사업 시작</dd>
+            <dd>
+              NGO봉사단 12기 베트남, 몽골, 미얀마, 르완다, 케냐 파견(10명)
+            </dd>
+            <dd>미얀마, 사무소 개소</dd>
+            <dd>LG디스플레이 혁신리더 봉사단 베트남 파견(606명)</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="./images/2012.jpg" alt="2012년" /></dt>
+            <dd>몽골, 제1회 후원의 밤 개최</dd>
+            <dd>르완다, 삼성-GCS 우정화장실 2호 완공</dd>
+            <dd>케냐, 빈민여성 자립지원사업 시작</dd>
+            <dd>LG디스플레이 동티모르 가축은행 캠페인 시작</dd>
+            <dd>케냐, 빈민가 여성 대상 비즈니스 교육 시작</dd>
+            <dd>제12회 지구촌대학생캠프 개최</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="./images/2013.jpg" alt="2013년" /></dt>
+            <dd>케냐, 하비스트뷰티살롱 1호점 오픈</dd>
+            <dd>GCS홈커밍데이 개최</dd>
+            <dd>제2회 지구촌, 우리들의 나눔축제 개최</dd>
+            <dd>르완다, 삼성-GCS 우정도서관 1호 개관</dd>
+            <dd>베트남, 한국 초청연수 실시</dd>
+            <dd>후원의 밤 및 사무총장 취임식</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
 ```
 
 ---
 
-### Destructuring
+### 방법 2
 
-```javascript
-//기존방식
-let person = {
-  name: 'haeun',
-  age: 20,
-}
+- float을 사용하지 않고 이미지를 좌측에 위치하도록 하는 방법.(background)
 
-let name = person.name
-let age = person['age']
-
-console.log(name, age)
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: '에스코어드림';
+        font-size: 14px;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      .history {
+        width: 750px;
+        margin: 30px;
+      }
+      .history li {
+        border: 1px solid #333;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .history dl {
+        margin: 10px 0;
+      }
+      .history dt {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+      }
+      .history dd {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-left: 190px;
+        background: url(./images/dot.jpg) left center no-repeat;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="history">
+      <ul>
+        <li>
+          <dl>
+            <dt><img src="./images/2011.jpg" alt="2011년" /></dt>
+            <dd>시민사회 피어리뷰 공개워크숍 몽골 사업성과 발제</dd>
+            <dd>베트남, 삼성생명 컴퓨터교실 사업 시작</dd>
+            <dd>케냐, 빈민여성 자립지원사업 시작</dd>
+            <dd>
+              NGO봉사단 12기 베트남, 몽골, 미얀마, 르완다, 케냐 파견(10명)
+            </dd>
+            <dd>미얀마, 사무소 개소</dd>
+            <dd>LG디스플레이 혁신리더 봉사단 베트남 파견(606명)</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="./images/2012.jpg" alt="2012년" /></dt>
+            <dd>몽골, 제1회 후원의 밤 개최</dd>
+            <dd>르완다, 삼성-GCS 우정화장실 2호 완공</dd>
+            <dd>케냐, 빈민여성 자립지원사업 시작</dd>
+            <dd>LG디스플레이 동티모르 가축은행 캠페인 시작</dd>
+            <dd>케냐, 빈민가 여성 대상 비즈니스 교육 시작</dd>
+            <dd>제12회 지구촌대학생캠프 개최</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt><img src="./images/2013.jpg" alt="2013년" /></dt>
+            <dd>케냐, 하비스트뷰티살롱 1호점 오픈</dd>
+            <dd>GCS홈커밍데이 개최</dd>
+            <dd>제2회 지구촌, 우리들의 나눔축제 개최</dd>
+            <dd>르완다, 삼성-GCS 우정도서관 1호 개관</dd>
+            <dd>베트남, 한국 초청연수 실시</dd>
+            <dd>후원의 밤 및 사무총장 취임식</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
 ```
-
-console창에 찍히는 결과 ↓
-
-```
-haeun 20
-```
-
-```
-let person = {
-  name : 'haeun',
-  age : 20
-}
-
-//destructuring방식 = 객체를 분해해서 값을 가져옴
-let { name,age } = person
-
-console.log(name,age)
-
-let array = [1,2,3,4]
-let [a,b,...rest] = array
-
-console.log(a,b)
-console.log(rest) // = a,b를 제외한 나머지 [3,4]
-```
-
----
-
-출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
