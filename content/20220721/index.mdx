@@ -1,83 +1,202 @@
 ---
-title: Javascript 문법 for REACT(코딩알려주는 누나)
-date: 2023-03-31
+title: 리스트이미지
+date: 2022-07-21
 cover: cover.jpg
-tags: [Web, Javascript, REACT]
+tags: [Web, Html, Css]
 ---
 
-### 🟠 Object shorthand assignment
+### 방법 1
 
-```javascript
-// 기존 방식
-let name = 'haeun'
-let age = '29'
+- 이미지를 직접 이미지 태그로 삽입한 float처리해 좌측에 위치하도록 함.
+- width를 거론하지 않고 리스트 앞에 dot을 붙이고 싶을 때는 dl태그에 왼쪽 마진을 넣어주면 된다!
 
-let person = {
-  name: name,
-  age: age,
-}
-
-console.log(person)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-{ name:'haeun',age:29 }
-```
-
-```javascript
-let name = 'haeun'
-let age = '29'
-
-// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
-let person = {
-  name,
-  age,
-}
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: '에스코어드림';
+        font-size: 14px;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      .culture {
+        width: 750px;
+        margin: 50px;
+      }
+      .culture li {
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .culture li img {
+        float: left;
+        margin: 20px;
+      }
+      .culture li dl {
+        margin-top: 20px;
+        margin-left: 280px;
+      }
+      .culture li dt {
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .culture li dd {
+        line-height: 1.5em;
+        background: url(./images/dot.jpg) left center no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="culture">
+      <ul>
+        <li>
+          <img src="./images/img1.jpg" alt="" />
+          <dl>
+            <dt>[해외및기타]베를린 필하모닉 내한공연</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+        <li>
+          <img src="./images/img2.jpg" alt="" />
+          <dl>
+            <dt>[아름다운목요일]금호아시아나솔로이스트 송년음악회</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+        <li>
+          <img src="./images/img3.jpg" alt="" />
+          <dl>
+            <dt>[아름다운목요알]젊은 예술가의 초상-김민지 Cello</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
 ```
 
 ---
 
-### Destructuring
+### 방법 2
 
-```javascript
-//기존방식
-let person = {
-  name: 'haeun',
-  age: 20,
-}
+- float을 사용하지 않고 이미지를 좌측에 위치하도록 하는 방법.(background)
 
-let name = person.name
-let age = person['age']
-
-console.log(name, age)
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: '에스코어드림';
+        font-size: 14px;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      .culture {
+        width: 750px;
+        margin: 50px;
+      }
+      .culture li {
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+      .culture .list1 {
+        background: url(./images/img1.jpg) 20px 20px no-repeat;
+      }
+      .culture .list2 {
+        background: url(./images/img2.jpg) 20px 20px no-repeat;
+      }
+      .culture .list3 {
+        background: url(./images/img3.jpg) 20px 20px no-repeat;
+      }
+      .culture li dl {
+        margin-top: 20px;
+        margin-left: 296px;
+        margin-bottom: 40px;
+      }
+      .culture li dt {
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .culture li dd {
+        line-height: 1.5em;
+        padding-left: 15px;
+        background: url(./images/dot.jpg) left center no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="culture">
+      <ul>
+        <li class="list1">
+          <dl>
+            <dt>[해외및기타]베를린 필하모닉 내한공연</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+        <li class="list2">
+          <dl>
+            <dt>[아름다운목요일]금호아시아나솔로이스트 송년음악회</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+        <li class="list3">
+          <dl>
+            <dt>[아름다운목요일]젊은 예술가의 초상-김민지 Cello</dt>
+            <dd>공연일자 : 2013년 11월 11일(월요일)~24(토요일)</dd>
+            <dd>공연시간 : 평일 20시 / 토요일 14시,17시/ 90분 (휴식없음)</dd>
+            <dd>티켓정보 : VIP석 10만원, R석 8만원, S석 6만원, A석 4만원</dd>
+            <dd>할인정보 : 단체할인 11명이상 20%할인</dd>
+            <dd>문의번호 : 1544 - 1681</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
 ```
-
-console창에 찍히는 결과 ↓
-
-```
-haeun 20
-```
-
-```
-let person = {
-  name : 'haeun',
-  age : 20
-}
-
-//destructuring방식 = 객체를 분해해서 값을 가져옴
-let { name,age } = person
-
-console.log(name,age)
-
-let array = [1,2,3,4]
-let [a,b,...rest] = array
-
-console.log(a,b)
-console.log(rest) // = a,b를 제외한 나머지 [3,4]
-```
-
----
-
-출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
