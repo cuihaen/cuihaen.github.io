@@ -1,83 +1,61 @@
 ---
-title: Javascript 문법 for REACT(코딩알려주는 누나)
-date: 2023-03-31
+title: HTML5의 새로운 속성
+date: 2022-07-29
 cover: cover.jpg
-tags: [Web, Javascript, REACT]
+tags: [Web, Css, Html]
 ---
 
-### 🟠 Object shorthand assignment
+#### 🟡 Contenteditable
 
-```javascript
-// 기존 방식
-let name = 'haeun'
-let age = '29'
+- 일반적으로 편집할 수 없는 `<p>`요소도 contenteditable속성으로 지정되면 편집할 수 있는 요소가 된다. 인터넷익스플로러 전용 속성이었지만 HTML5에서 채택되었다. 변경한 내용을 처리하기 위해서는 별도의 기능을 자바스크립트로 서버측 프로그램을 통하여 구현해야 한다.
 
-let person = {
-  name: name,
-  age: age,
-}
-
-console.log(person)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-{ name:'haeun',age:29 }
-```
-
-```javascript
-let name = 'haeun'
-let age = '29'
-
-// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
-let person = {
-  name,
-  age,
-}
+```html
+<p contenteditable="true">
+  [contenteditable]속성이 "true"가 적용된 요소입니다.
+</p>
 ```
 
 ---
 
-### Destructuring
+#### 🟡 Draggable
 
-```javascript
-//기존방식
-let person = {
-  name: 'haeun',
-  age: 20,
-}
+- 지정된 요소를 드래그 할 수 있게 한다. 웹 브라우저 외부로까지 드래그가 가능하다.(저장)
+- 현재 대다수의 브라우저가 기본 기능으로 지원하고 있다.(기본값은 'true')
+- 이미지는 복사되고 링크는 바로 가기가 된다.
 
-let name = person.name
-let age = person['age']
-
-console.log(name, age)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-haeun 20
-```
-
-```
-let person = {
-  name : 'haeun',
-  age : 20
-}
-
-//destructuring방식 = 객체를 분해해서 값을 가져옴
-let { name,age } = person
-
-console.log(name,age)
-
-let array = [1,2,3,4]
-let [a,b,...rest] = array
-
-console.log(a,b)
-console.log(rest) // = a,b를 제외한 나머지 [3,4]
+```html
+<div>
+  <img src="images/green.jpg" alt="그린 기업실무반" draggable="true" />
+  <a href="http://cafe.naver.com/greenjob">그린 기업실무반</a>
+</div>
+<div>
+  <img src="images/green.jpg" alt="그린 기업실무반" draggable="false" />
+  <a href="http://cafe.naver.com/greenjob">그린 기업실무반</a>
+</div>
 ```
 
 ---
 
-출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
+#### 🟡 Hidden
+
+- CSS를 사용하지 않고도 HTML내에서 요소를 숨길수가 있다.
+- CSS가 제거하는 것과 같은 효과를 내는 것이라면 [hidden]은 HTML내에서 완전히 제거하는 것과 같은 기능이다.(=display:none)
+- 리더기가 읽어주지 않게 되므로 웹 접근성에 적합하지 않은 태그로 리더기가 읽어야하는 요소에는 사용 안함!
+
+```html
+<div>
+  <p hidden="hidden">이문장은 [hidden] 속성이 적용 되었습니다.</p>
+</div>
+```
+
+---
+
+#### 🟡 Spellcheck
+
+-서식요소나 contenteditable 속성을 사용하여 편집 가능한 상태의 요소를 편집할 때 맞춤법 검사를 하도록 하는 속성. 영어만 확인가능하므로 사실상 실용성은 없음.
+
+```html
+<div>
+  <textarea spellcheck="true"></textarea>
+</div>
+```
