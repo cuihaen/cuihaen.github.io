@@ -1,83 +1,25 @@
 ---
-title: Javascript 문법 for REACT(코딩알려주는 누나)
-date: 2023-03-31
+title: 태그의 분류 (Inline vs Block)
+date: 2022-08-06
 cover: cover.jpg
-tags: [Web, Javascript, REACT]
+tags: [Web, Html, Css]
 ---
 
-### 🟠 Object shorthand assignment
+#### 🟡 Inline - level element(인라인 요소)
 
-```javascript
-// 기존 방식
-let name = 'haeun'
-let age = '29'
+- `<span>`, `<strong>`, `<em>`, `<a>`
+- 정렬 방식 : 수평 정렬(좌우 정렬)
+- width(너비) = 콘텐츠 요소의 길이/양
+- inline요소는 block요소의 자식계층으로만 사용할 수 있다.
+- inline요소 간 서로 부모자식관계 성립 가능.(단 예외도 존재)
 
-let person = {
-  name: name,
-  age: age,
-}
+→ 인라인 요소 : `<a>`,`<abbr>`,`<acronym>`,`<b>`,`<bdo>`,`<big>`,`<br>`,`<button>`,`<cite>`,`<code>`,`<dfn>`,`<em>`,`<i>`,`<img>`,`<input>`,`<kbd>`,`<label>`,`<map>`,`<object>`,`<output>`,`<q>`,`<samp>`,`<script>`,`<select>`,`<small>`,`<span>`,`<strong>`,`<sub>`,`<sup>`,`<textarea>`,`<time>`,`<tt>`,`<var>`
 
-console.log(person)
-```
+#### 🟡 Block - level element(블럭 요소)
 
-console창에 찍히는 결과 ↓
+- `<div>`, `<p>`가 가장 기본적인 블럭요소이다.
+- **자동줄바꿈**이 적용되며, 기본적으로 너비 100% 값을 가진다.
+- 너비(width)와 높이(height)를 설정할 수 있다.
+- margin과 padding을 설정할 수 있다.
 
-```
-{ name:'haeun',age:29 }
-```
-
-```javascript
-let name = 'haeun'
-let age = '29'
-
-// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
-let person = {
-  name,
-  age,
-}
-```
-
----
-
-### Destructuring
-
-```javascript
-//기존방식
-let person = {
-  name: 'haeun',
-  age: 20,
-}
-
-let name = person.name
-let age = person['age']
-
-console.log(name, age)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-haeun 20
-```
-
-```
-let person = {
-  name : 'haeun',
-  age : 20
-}
-
-//destructuring방식 = 객체를 분해해서 값을 가져옴
-let { name,age } = person
-
-console.log(name,age)
-
-let array = [1,2,3,4]
-let [a,b,...rest] = array
-
-console.log(a,b)
-console.log(rest) // = a,b를 제외한 나머지 [3,4]
-```
-
----
-
-출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
+→ 블럭요소 : `<address>`, `<article>`, `<aside>`, `<blockquote>`, `<canvas>`, `<div>`, `<dl>`, `<dt>`, `<dd>`, `<fieldset>`, `<figcaption>`, `<figure>`, `<footer>`, `<form>`, `<h1>`-`<h6>`, `<header>`, `<hr>`, `<li>` , `<main>`,`<nav>`, `<noscript>`, `<ol>`, `<p>`, `<pre>`, `<section>`,`<table>`, `<tfoot>`, `<ul>`, `<video>`
