@@ -1,83 +1,110 @@
 ---
-title: Javascript 문법 for REACT(코딩알려주는 누나)
+title: Css(table)
 date: 2023-03-31
 cover: cover.jpg
-tags: [Web, Javascript, REACT]
+tags: [Web, Html, Css]
 ---
 
-### 🟠 Object shorthand assignment
+#### 🟡 초기세팅
 
-```javascript
-// 기존 방식
-let name = 'haeun'
-let age = '29'
-
-let person = {
-  name: name,
-  age: age,
+```css
+* {
+  margin: 0;
+  padding: 0;
 }
-
-console.log(person)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-{ name:'haeun',age:29 }
-```
-
-```javascript
-let name = 'haeun'
-let age = '29'
-
-// key와 value의 값이 일치할 때 shorthand 방식을 쓸 수 있다.
-let person = {
-  name,
-  age,
+table {
+  border-collapse: collapse;
+  width: 600px;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 ```
 
----
-
-### Destructuring
-
-```javascript
-//기존방식
-let person = {
-  name: 'haeun',
-  age: 20,
-}
-
-let name = person.name
-let age = person['age']
-
-console.log(name, age)
-```
-
-console창에 찍히는 결과 ↓
-
-```
-haeun 20
-```
-
-```
-let person = {
-  name : 'haeun',
-  age : 20
-}
-
-//destructuring방식 = 객체를 분해해서 값을 가져옴
-let { name,age } = person
-
-console.log(name,age)
-
-let array = [1,2,3,4]
-let [a,b,...rest] = array
-
-console.log(a,b)
-console.log(rest) // = a,b를 제외한 나머지 [3,4]
+```html
+<table>
+  <tr>
+    <th>번호</th>
+    <th>제목</th>
+    <th>이름</th>
+    <th>날짜</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>오늘 날씨가 참으로 좋습니다.</td>
+    <td>홍길동</td>
+    <td>2012-03-05</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>오늘 날씨가 참으로 좋습니다.</td>
+    <td>홍길동</td>
+    <td>2012-03-05</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>오늘 날씨가 참으로 좋습니다.</td>
+    <td>홍길동</td>
+    <td>2012-03-05</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>오늘 날씨가 참으로 좋습니다.</td>
+    <td>홍길동</td>
+    <td>2012-03-05</td>
+  </tr>
+</table>
 ```
 
 ---
 
-출처 : 코딩알려주는누나 - 👉🏻 [리액트 시작 전 모르면 낭패보는 자바스크립트 문법 싹 정리(영상)](https://youtu.be/NcI-WJSWdv8)
+#### 🟡 테이블 처리
+
+- 행 단위로 잡는 방법 (odd:홀수, even:짝수)
+
+```css
+table tr:nth-child(odd) {
+  background: #eee;
+}
+table tr:nth-child(even) {
+  background: rgb(245, 209, 209);
+}
+table tr:first-child {
+  background: orange;
+}
+```
+
+```css
+table tr:nth-of-type(odd) {
+  background: red;
+}
+table tr:nth-of-type(even) {
+  background: gray;
+}
+```
+
+- 열 단위로 잡는 방법 = nth-child와 nth-of-type 모두 사용 가능!
+
+```css
+table td:nth-child(4n) {
+  background: grey;
+}
+/*n은 배수의 역할을 함.*/
+```
+
+```css
+table td:nth-child(4n) {
+  background: grey;
+}
+table td:nth-child(4n + 1) {
+  background: darkcyan;
+}
+table td:nth-child(4n + 2) {
+  background: darkolivegreen;
+}
+table td:nth-child(4n + 3) {
+  background: darkgoldenrod;
+}
+```
