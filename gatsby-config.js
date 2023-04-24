@@ -6,7 +6,7 @@ module.exports = {
     url: 'https://cuihaen.github.io',
     author: 'Haeun Choi',
     image: 'https://gatsby-starter-amsterdam.netlify.com/og-image.jpg',
-    intro: 'Welcome',
+    intro: 'Alticles',
     menuLinks: [
       {
         name: "Haeun's Blog",

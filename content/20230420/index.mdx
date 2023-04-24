@@ -1,0 +1,179 @@
+---
+title: 좋은 git commit 메세지 작성법(1)
+date: 2023-04-20
+cover: cover.jpg
+tags: [Git, Others]
+---
+
+> 기존에는 혼자서 여러가지 프로젝트들을 진행하면서 마음대로 git의 commit메세지를 작성해왔는데,
+> Wanted의 프리온보딩 프론트엔드 챌린지에 강의를 들으며 여러명이 함께 프로젝트를 진행하기 위해서는 암묵적으로 통일된 간결한 commit메세지 작성을 통해
+> 다른 사람들도 쉽게 어떤 부분이 변경되었는지 빠른 파악이 가능하도록 만드는 것에 대한 중요성을 다시 한번 생각해보게 되었다.
+>
+> 아직 다수와 함께 진행하는 큰 프로젝트를 참여해보지는 않았지만 미리 좋은 git commit메세지를 작성하는 습관을 기르기 위해 수강생들에게 강사님께서
+> 참고하라고 공유해주신 [git commit메세지 작성 규칙 관련 글](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html) 속
+> 여러 규칙들을 직접 이 글을 작성하며 공부해보았다. 앞으로는 잘 참고하여 좋은 git commit메세지들로 학습기록을 남겨보아야겠다.
+
+#### 🟡 커밋 메세지 규칙
+
+**1. 동사보다는 명사를 사용하자**  
+→ 동사를 명사화해 만드는 장황한 문장보다는 간결하게 명사로 표현하는 것이 좋다.
+
+**2. 관사 사용하지 않기**  
+→ 반드시 필요한 경우를 제외하고는 **a, an, the와 같은 관사**는 사용하지 않는 것이 좋다.
+
+**3. 부정문 `Don't`사용하기**  
+→ 일반적으로 commit메세지를 작성할 때 'A를 사용해'라는 식의 명령문 형태로 작성하므로, 반대 이야기를 하려면 'A를 사용하지마', 즉 'Don't use'의 형태로 작성해야 한다.
+
+```node
+//예시
+Do not return list if there are too many crashes
+```
+
+** 오타수정은 `Correct misspelled text`처럼 긴 표현이 아닌 `Fix typo`라고 간단히 표현해줄 수 있다.**
+
+---
+
+#### 🟡 좋은 커밋 메시지를 위한 영어 단어 목록
+
+###### 1. Fix(올바르지 않은 동작을 고친 경우에 사용)
+
+** 📍 Fix A** (= A를 수정합니다.)
+
+```node
+Fix changelog entry
+Fix stat cache
+Fix search path
+```
+
+** 📍 Fix A in B** (= B의 A를 수정합니다.)  
+→ 가장 자주 사용되는 패턴!
+
+```node
+Fix build warning in node_report.cc
+Fix calculation in process.uptime()
+```
+
+** 📍 Fix A which B, Fix A that B** (= B절인 A를 수정합니다.)  
+→ which, that과 같은 관계대명사로 A를 부연설명. 무엇을 수정한 것인지 보다 자세히 설명하기 위해 사용함.
+
+```node
+Fix incorrect type which makes animated gifs not loop forever on device
+Fix crash that happens when a component throws an exception that contains a null message
+```
+
+** 📍 Fix A to B, Fix A to be B** (= B를 위해 A를 수정합니다.)  
+→ 왜 수정하는지를 추가로 설명하기 위해 사용함.
+
+```node
+Fix inability to remove 'Disabled' state from AccessibilityStates
+Fix HTTP connection timeout callback to be appropriately called
+```
+
+** 📍 Fix A so that B** (= A를 수정해서 B가 되었습니다.)  
+→ ‘Fix A to B’와 의미는 비슷하나, 어감이 살짝 다름. 고쳐진 B의 상태가 보다 강조된다.
+
+```node
+Fix react-native init --help so that it doesn't return undefined
+Fix Android 28's inverted ScrollView so that momentum is in the proper direction
+```
+
+** 📍 Fix A where B** (= B처럼 발생하는 A를 수정했습니다.)  
+→ 여기서 A는 보통 ‘issue’, ‘error’, ‘crash’등이 들어갑니다. B는 문제가 발생한 **모습**을 적는다.
+
+```node
+Fix case where content of inline views didn't get relaid out
+Fix case where inline view is visible even though it should have been truncated
+```
+
+** 📍 Fix A when B** (= B일때 발생하는 A를 수정했습니다.)  
+→ 여기서 A는 보통 ‘issue’, ‘error’, ‘crash’등이 들어갑니다. B는 문제가 발생한 **상황**을 적는다.
+
+```node
+Fix accidental showing of Modal when visible prop is undefined or null
+Fix crash when removing root nodes
+```
+
+---
+
+###### 2. ADD(코드나 테스트, 예제, 문서 등의 추가가 있을 때 사용)
+
+** 📍 Add A** (= A를 추가합니다.)
+→ 추가하는 경우는 대부분 목표나 목적이 명시되므로 사용빈도 낮음.
+
+```node
+Add ERR_INSPECTOR_COMMAND error
+```
+
+** 📍 Add A for B** (= B를 위해 A를 추가합니다.)
+
+```node
+Add missing includes for vtune build
+Add test for dynamically enabling node.async_hooks tracing
+```
+
+** 📍 Add A to B** (= B에 A를 추가합니다.)
+
+```node
+Add error description to Image onError callback
+Add displayName to ActivityIndicator
+```
+
+---
+
+###### 3. REMOVE(코드의 삭제가 있을 때 사용)
+
+‘Clean’이나 ‘Eliminate’를 사용하며, 보통 A 앞에 ‘unnecessary’, ‘useless’, ‘unneeded’, ‘unused’, ‘duplicated’가 붙는 경우가 많다.
+
+** 📍 Remove A** (= A를 삭제합니다.)
+
+```node
+Remove unneeded .gitignore entries
+Remove unused variable
+```
+
+** 📍 Remove A from B** (= B에서 A를 삭제합니다.)
+
+```node
+Remove absolute path parameter from transformers
+Remove trailing slash from origin header if no port is specified
+```
+
+###### 4. USE(특별히 무언가를 사용해 구현을 하는 경우 사용)
+
+** 📍 Use A** (= A를 사용합니다.)
+→ ‘사용하였음’을 이야기 할 때는 대체적으로 목적이 필요하기 때문에 사용빈도 낮음.
+
+```node
+Use more stable cast where possible
+```
+
+** 📍 Use A for B** (= B에 A를 사용합니다.)
+
+```node
+Use fake MessageEvent for port.onmessage
+Use object writer for thrown errors
+```
+
+** 📍 Use A to B** (= B가 되도록 A를 사용합니다.)
+
+```node
+use common operations to define browser globals
+use triggerReport() to handle signals
+```
+
+** 📍 Use A in B** (= B에서 A를 사용합니다.)
+
+```node
+Use same parameter name in node_report.cc
+Use TextLegend example in Android as well
+```
+
+** 📍 Use A instead of B** (= B 대신 A를 사용합니다.)
+
+```node
+Use babel runtime instead of relying on global babelHelpers and regenerator
+```
+
+---
+
+출처 : ull.im 블로그 - 👉🏻 [좋은 git commit 메시지를 위한 영어 사전 by Reid](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
