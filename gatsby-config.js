@@ -4,6 +4,7 @@ module.exports = {
     description:
       '주니어 프론트엔드 개발자 최하은 입니다.',
     url: 'https://cuihaen.github.io',
+    lang:'ko',
     author: 'Haeun Choi',
     image: 'https://gatsby-starter-amsterdam.netlify.com/og-image.jpg',
     intro: 'Alticles',

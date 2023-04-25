@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-amsterdam",
   "version": "2.0.1",
-  "author": "Ryan Wiemer <ryan@ryanwiemer.com>",
+  "author": "Haeun Choi <choi_haeun367@naver.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
