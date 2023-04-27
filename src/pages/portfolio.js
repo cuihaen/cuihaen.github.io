@@ -46,7 +46,7 @@ const AboutPage = ({ data }) => {
   return (
     <Container>
       <SEO title="About" description="This is just an example page" />
-      <Title>About</Title>
+      <Title>Portfolio</Title>
       <Content>
         <p>
           내용준비중입니다.{' '}
@@ -80,8 +80,7 @@ const AboutPage = ({ data }) => {
             rel="noopener noreferrer"
           >
             Gatsby Theme Amsterdam GitHub Repo
-          </a>
-          . */}
+          </a> */}
         </p>
       </Content>
     </Container>

@@ -17,11 +17,20 @@ module.exports = {
         name: 'About Me',
         slug: '/about/',
       },
+      {
+        name: 'Portfolio',
+        slug: '/portfolio/',
+      },
     ],
     footerLinks: [
       {
-        name: 'Visit my portfolio →',
-        url: 'https://haeun367.cafe24.com/profile',
+        name: 'Github',
+        url: 'https://github.com/cuihaen',
+      },
+      
+      {
+        name: 'Contact',
+        url: 'mailto:choi_haeun367@naver.com',
       },
     ],
   },
@@ -33,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Theme Amsterdam`,
+        name: `Haeun's blog`,
         short_name: `Amsterdam`,
         background_color: `#f5f0eb`,
         theme_color: `#f5f0eb`,
