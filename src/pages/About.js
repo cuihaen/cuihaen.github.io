@@ -8,9 +8,9 @@ const Title = styled.h2`
   line-height: 1.25;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   margin: 0 auto 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 `
 
@@ -46,10 +46,10 @@ const AboutPage = ({ data }) => {
   return (
     <Container>
       <SEO title="About" description="This is just an example page" />
-      <Title>About</Title>
+      <Title>“I may not be there yet, but I’m closer than I was yesterday.”</Title>
       <Content>
         <p>
-          내용준비중입니다.{' '}
+         꾸준한 성장을 통해 더 나은 내가 되고 이를 통해 사회에 기여하고 싶은 최하은입니다.{' '}
           {/* <a
             href="https://www.gatsbyjs.org/docs/recipes/#creating-pages-automatically"
             target="_blank"
