@@ -49,6 +49,7 @@ const AboutPage = ({ data }) => {
       <Title>“I may not be there yet, but I’m closer than I was yesterday.”</Title>
       <Content>
         <p>
+          해당 페이지는 내용 준비중입니다.
          {/* 꾸준한 성장을 통해 더 나은 내가 되고 이를 통해 사회에 기여하고 싶은 최하은입니다.{' '} */}
           {/* <a
             href="https://www.gatsbyjs.org/docs/recipes/#creating-pages-automatically"
